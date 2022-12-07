@@ -83,3 +83,6 @@ check_marks = Label(fg=GREEN, bg=BLUE)
 check_marks.grid(column=1, row=3)
 
 window.mainloop()
+
+
+#part of Angela Yu's python Udemy course
