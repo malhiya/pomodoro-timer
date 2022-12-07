@@ -1,7 +1,7 @@
 from tkinter import *
 import math
 import pygame
-# ---------------------------- CONSTANTS ------------------------------- #
+
 PINK = "#FF9E9E"
 RED = "#e7305b"
 GREEN = "#285430"
@@ -14,11 +14,6 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
-# ---------------------------- TIMER RESET ------------------------------- #
-# pygame.mixer.init()
-# def play_sound():
-#     pygame.mixer.music.load("Downloads/success_bell-6776.mp3")
-
 def reset_timer():
     window.after_cancel(timer)
     timer_label.config(text="Timer", fg=GREEN)
@@ -26,7 +21,7 @@ def reset_timer():
     canvas.itemconfig(counter, text="00:00")
     global reps
     reps = 0
-# ---------------------------- TIMER MECHANISM ------------------------------- #
+
 def start_timer():
     global reps
     reps += 1
@@ -44,8 +39,6 @@ def start_timer():
         timer_label.config(text="Work", fg=TEAL)
         count_down(10)
 
-
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     global timer
     count_min = math.floor(count / 60)
@@ -66,7 +59,6 @@ def count_down(count):
             check_marks.config(text=checks)
 
 
-# ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=BLUE)
